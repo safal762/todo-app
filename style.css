@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding-top: 40px;
+}
+
+.cointainer {
+    width: 100%;
+    max-width: 650px;
+    padding: 15px;
+}
+
+.addTask {
+    display: flex;
+    width: 100%;
+    background-color: #f5f0eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.addTask input[type="text"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 18px 25px;
+    font-size: 1.1rem;
+    color: #a8a096;
+}
+
+.addTask input[type="text"]::placeholder {
+    color: #a8a096;
+}
+
+#add {
+    background-color: #71b7cd;
+    color: #ffffff;
+    border: none;
+    padding: 0 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#add:hover {
+    background-color: #5da0b5;
+}
+
+.taskList {
+    background-color: #f5f0eb;
+    border-radius: 30px;
+    padding: 20px 0;
+    min-height: 350px; 
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.task:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    right: 30px;
+    height: 1px;
+    background-color: #cedadd;
+}
+
+.task p {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #2b2b2b;
+    margin-left: 15px;
+    transition: color 0.2s ease;
+}
+
+.task input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 26px;
+    height: 26px;
+    border: 3px solid #8e8e8e;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.task input[type="checkbox"]:checked {
+    border-color: #e28a3a;
+    background-color: transparent;
+}
+
+.task input[type="checkbox"]:checked ~ p {
+    color: #c4bbb4;
+}
+
+.task input[type="checkbox"]:checked::before {
+    content: '✓'; 
+    color: #e28a3a;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.taskList button{
+    width: 20px;
+    height: 20px;
+    color: #f3a4a4; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.taskList button:hover{
+    color: #d9534f;
+}
+
